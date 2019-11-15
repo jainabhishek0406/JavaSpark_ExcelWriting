@@ -1,0 +1,7 @@
+orderid,custid_fk,type,unit,price
+501,106,home,1,340
+502,102,office,4,560
+503,101,others,6,120
+504,101,home,9,420
+505,105,office,1,120
+506,106,office,7,600

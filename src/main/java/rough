@@ -1,0 +1,31 @@
+package main.java;
+
+import main.java.utility.SparkUtils;
+import org.apache.spark.sql.SparkSession;
+
+/**
+ * @author Abhishek Jain
+ */
+public class DataProcessor {
+    //private static SQLContext sqlContext;
+    //private static JavaSparkContext javaSparkContext;
+
+    private static SparkSession sparkSession;
+
+    public void processListData() {
+        System.out.println("##### Inside processListData #####");
+        sparkSession = SparkUtils.getSparkSession();
+        System.out.println("sparkSession = " + sparkSession);
+    }
+}
+
+
+
+    /*public void processListData() {
+        System.out.println("##### Inside processListData #####");
+        javaSparkContext = SparkUtils.getJavaSparkContext();
+        List<Integer> listData = Arrays.asList(10, 20, 30, 40, 50, 60, 70, 80, 90, 100);
+        JavaRDD<Integer> distributedData = javaSparkContext.parallelize(listData);
+        LogManager.logger.info("##### After parallelize #####");
+        System.out.println("Total number of Partition= " + distributedData.getNumPartitions());
+    }*/
