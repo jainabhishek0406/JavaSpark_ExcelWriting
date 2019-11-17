@@ -24,9 +24,8 @@ public class EntryPoint extends Configured implements Tool {
     }
 
     public int run(String[] strings) throws Exception {
-        DataProcessor dataProcessor = new DataProcessor();
         sparkSession = SparkUtils.getSparkSession();
-        dataProcessor.processListData(sparkSession);
+        DataProcessor.processListData(sparkSession);
         return 0;
     }
 }

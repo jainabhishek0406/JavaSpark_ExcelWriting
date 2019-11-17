@@ -1,0 +1,7 @@
+payment_fk,shippingstatus,shippingdate,expecteddelivery
+201,shipped,11/1/2019,11/5/2019
+202,ontime,11/11/2019,11/16/2019
+203,orderpending,11/12/2019,11/21/2019
+204,shipped,11/1/2019,11/10/2019
+205,Arrivingtoday,11/9/2019,11/19/2019
+206,ontime,11/5/2019,11/15/2019

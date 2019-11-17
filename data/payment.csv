@@ -1,0 +1,7 @@
+payment_pk,custid_fk,status,method
+201,101,paid,creditcard
+202,102,cod,debitcard
+203,103,failed,netbanking
+204,104,paid,paytm
+205,105,cod,jiomoney
+206,106,failed,creditcard

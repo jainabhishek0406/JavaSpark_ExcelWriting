@@ -16,7 +16,7 @@ import java.util.List;
  * https://spark.apache.org/docs/latest/sql-getting-started.html
  */
 public class DataProcessor {
-    public void processListData(SparkSession sparkSession) throws AnalysisException, IOException {
+    public static void processListData(SparkSession sparkSession) throws AnalysisException, IOException {
         System.out.println("##### Inside processListData #####");
         System.out.println("sparkSession = " + sparkSession);
 
@@ -48,6 +48,7 @@ public class DataProcessor {
 
         Dataset<Row> custOrderJoinDS = custDS.join(orderDS, custDS.col("custid_pk").equalTo(orderDS.col("custid_fk")));
 
+        Dataset<Row> newMappedDS = custOrderJoinDS.map(x -> x.size());
         //custOrderJoinDS.show();
 
         Dataset<ExcelUtilModel> modelDS =
